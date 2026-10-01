@@ -1,0 +1,65 @@
+CUSTOM TABLE DESIGN ORDERING PROTOTYPE PLAN
+==============================================
+
+Project Overview:
+A 3-step prototype for customizing and ordering tables (Size -> Material -> Finish).
+Designed using a mid-fidelity wireframe aesthetic (minimal palette, neutral colors, clean UI elements).
+Content options are stored in data/content.json while step navigation controls are hardcoded into HTML.
+
+Directory Structure:
+--------------------
+- index.html               (Main HTML structure with hardcoded step navigation)
+- css/
+  └── style.css            (Mid-fidelity styling, grayscale/wireframe UI)
+- js/
+  └── script.js            (Dynamic loading of step contents from JSON and step switching logic)
+- data/
+  └── content.json         (JSON file defining shapes, dimensions, materials, styles, finishes)
+- step1.jpeg, step2.jpeg, step3.jpeg (Wireframe reference images)
+
+Wireframe Evaluation:
+---------------------
+1. Header & Segmented Navigation (Top):
+   - Title: "CUSTOM TABLES BY GREG"
+   - Hardcoded segmented navigation bar in index.html: [ SIZE | MATERIAL | FINISH ]
+   - Indicates current step and allows tab switching.
+
+2. Preview Viewport (Middle):
+   - Box area with left (<) and right (>) navigation arrows showing a table wireframe preview.
+
+3. Stage 1 — Size (step1.jpeg):
+   - Table Shape Segmented Control: CIRCLE | OVAL | RECTANGLE
+   - Dimension Selectors:
+     * LENGTH: Value input field + preset buttons [ 2ft | 4ft | 6ft ]
+     * WIDTH: Value input field + preset buttons [ 1ft | 2ft | 4ft ]
+     * HEIGHT: Value input field + preset buttons [ 2.5ft | 3ft | 3.5ft ]
+   - Next Button: Navigates to Material stage.
+
+4. Stage 2 — Material (step2.jpeg):
+   - Table Top Material: WOOD | METAL | PLASTIC
+   - Table Top Style: Style 1 | Style 2 | Style 3
+   - Legs Material: WOOD | METAL | PLASTIC
+   - Legs Style: Style 1 | Style 2 | Style 3
+   - Next Button: Navigates to Finish stage.
+
+5. Stage 3 — Finish (step3.jpeg):
+   - Table Top Colour: NATURAL | BLACK | COLOUR
+   - Legs Colour: NATURAL | BLACK | COLOUR
+   - Send Button: Submits order.
+
+Step-by-Step Implementation Strategy:
+--------------------------------------
+Phase 1: Foundation & Navigation (Step 1 Focus)
+  - Hardcode top segmented navigation [ SIZE | MATERIAL | FINISH ] in index.html.
+  - Setup mid-fidelity CSS wireframe theme.
+  - Implement JSON fetching in script.js to render Stage 1 (Size) options dynamically.
+
+Phase 2: Stage 2 (Material) Implementation
+  - Build dynamic rendering for Table Top and Legs materials/styles.
+
+Phase 3: Stage 3 (Finish) Implementation
+  - Build dynamic rendering for Table Top and Legs finishes/colours.
+  - Implement order submission handling.
+
+Phase 4: Preview & Sync Polish
+  - Connect user selections across steps to update table preview display.

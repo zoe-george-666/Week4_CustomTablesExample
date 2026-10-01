@@ -1,0 +1,56 @@
+{
+  "appTitle": "Custom Tables by Greg",
+  "sizeStep": {
+    "shapes": ["CIRCLE", "OVAL", "RECTANGLE"],
+    "dimensions": [
+      {
+        "key": "length",
+        "label": "LENGTH",
+        "unit": "ft",
+        "presets": ["2ft", "4ft", "6ft"]
+      },
+      {
+        "key": "width",
+        "label": "WIDTH",
+        "unit": "ft",
+        "presets": ["1ft", "2ft", "4ft"]
+      },
+      {
+        "key": "height",
+        "label": "HEIGHT",
+        "unit": "ft",
+        "presets": ["2.5ft", "3ft", "3.5ft"]
+      }
+    ]
+  },
+  "materialStep": {
+    "sections": [
+      {
+        "key": "tableTop",
+        "label": "TABLE TOP",
+        "materials": ["WOOD", "METAL", "PLASTIC"],
+        "styles": ["Style 1", "Style 2", "Style 3"]
+      },
+      {
+        "key": "legs",
+        "label": "LEGS",
+        "materials": ["WOOD", "METAL", "PLASTIC"],
+        "styles": ["Style 1", "Style 2", "Style 3"]
+      }
+    ]
+  },
+  "finishStep": {
+    "sections": [
+      {
+        "key": "tableTopColour",
+        "label": "TABLE TOP COLOUR",
+        "options": ["NATURAL", "BLACK", "COLOUR"]
+      },
+      {
+        "key": "legsColour",
+        "label": "LEGS COLOUR",
+        "options": ["NATURAL", "BLACK", "COLOUR"]
+      }
+    ]
+  }
+}

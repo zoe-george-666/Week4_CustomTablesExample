@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Tables by Greg - Version 2</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="prototype-container">
+    <header class="app-header">
+      <h1 id="app-title">CUSTOM TABLES BY Greg (Version 2)</h1>
+      <!-- Hardcoded step navigation as requested -->
+      <nav class="step-nav" aria-label="Order steps">
+        <button class="nav-tab active" data-step="size">SIZE</button>
+        <button class="nav-tab" data-step="material" disabled>MATERIAL</button>
+        <button class="nav-tab" data-step="finish" disabled>FINISH</button>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <!-- Mid-fidelity Table Preview Area with Arrow Placeholders -->
+      <section class="preview-section" aria-label="Table preview placeholder">
+        <button class="arrow-btn left-arrow" aria-label="Previous view">&lt;</button>
+        <div class="preview-placeholder">
+          <div class="placeholder-graphic">
+            <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="20" width="100" height="15" rx="3" stroke="#666" stroke-width="2" fill="#e0e0e0"/>
+              <line x1="25" y1="35" x2="20" y2="70" stroke="#666" stroke-width="3" stroke-linecap="round"/>
+              <line x1="95" y1="35" x2="100" y2="70" stroke="#666" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <button class="arrow-btn right-arrow" aria-label="Next view">&gt;</button>
+      </section>
+
+      <!-- Stage 1 Container: SIZE -->
+      <section id="stage-size" class="stage-container">
+        <!-- Shape Segmented Control -->
+        <div class="control-group">
+          <div id="shape-segmented" class="segmented-control">
+            <!-- Populated dynamically from content.json (no default selection) -->
+          </div>
+        </div>
+
+        <!-- Dynamic Dimension Controls (Length, Width, Height) -->
+        <div id="dimensions-container" class="dimensions-group">
+          <!-- Populated dynamically from content.json (no default selection) -->
+        </div>
+
+        <!-- Navigation Button -->
+        <div class="action-footer">
+          <button id="next-btn-size" class="next-btn" disabled>NEXT &gt;</button>
+        </div>
+      </section>
+
+      <!-- Stage 2 Container: MATERIAL -->
+      <section id="stage-material" class="stage-container" style="display: none;">
+        <div id="material-sections-container" class="material-group">
+          <!-- Dynamic Material & Style Sections for TABLE TOP and LEGS -->
+        </div>
+
+        <!-- Navigation Button -->
+        <div class="action-footer">
+          <button id="next-btn-material" class="next-btn" disabled>NEXT &gt;</button>
+        </div>
+      </section>
+
+      <!-- Stage 3 Container: FINISH -->
+      <section id="stage-finish" class="stage-container" style="display: none;">
+        <div id="finish-sections-container" class="material-group">
+          <!-- Dynamic Finish Options for TABLE TOP COLOUR and LEGS -->
+        </div>
+
+        <!-- Action Button -->
+        <div class="action-footer">
+          <button id="send-btn" class="next-btn send-btn" disabled>SEND</button>
+        </div>
+      </section>
+
+      <!-- Order Confirmation Screen -->
+      <section id="stage-confirmation" class="stage-container" style="display: none;">
+        <div class="confirmation-box">
+          <h2>ORDER SUBMITTED</h2>
+          <p>Thank you! Your custom table configuration has been sent.</p>
+          <div id="order-summary-details" class="summary-details"></div>
+          <button id="reset-btn" class="next-btn">START OVER</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/script-v2.js"></script>
+</body>
+</html>
